@@ -1,0 +1,598 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\instrutordto\\lerinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\instrutordto\\lerinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\instrutordto\\criarinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\instrutordto\\criarinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\instrutordto\\atualizarinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\instrutordto\\atualizarinstrutordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\domains\\instrutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\domains\\instrutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursodto\\criarcursodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursodto\\criarcursodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\domains\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\domains\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursodto\\lercursodto.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursodto\\lercursodto.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursodto\\atualizarcursodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursodto\\atualizarcursodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursoalunodto\\criarareacursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursoalunodto\\criarareacursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursoalunodto\\lerareacursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursoalunodto\\lerareacursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\alunodto\\leralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\alunodto\\leralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\alunodto\\criaralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\alunodto\\criaralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\cursoalunodto\\atualizarcursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\cursoalunodto\\atualizarcursoalunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\domains\\cursoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\domains\\cursoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\areaexpecializacaodto\\lerareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\areaexpecializacaodto\\lerareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\domains\\areaexpecializacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\domains\\areaexpecializacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\areaexpecializacaodto\\criarareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\areaexpecializacaodto\\criarareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\areaexpecializacaodto\\atualizarareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\areaexpecializacaodto\\atualizarareaexpecializacaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\applications\\service\\instrutorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\applications\\service\\instrutorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\dtos\\alunodto\\atualizaralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\dtos\\alunodto\\atualizaralunodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\domains\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\domains\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\applications\\service\\cursoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\applications\\service\\cursoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\interfaces\\iinstrutorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\interfaces\\iinstrutorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\repositories\\instrutorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\repositories\\instrutorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\repositories\\cursorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\repositories\\cursorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\contexts\\learnhomedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\contexts\\learnhomedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\repositories\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\repositories\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\repositories\\areaexpecializacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\repositories\\areaexpecializacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\interfaces\\iareaexpecializacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\interfaces\\iareaexpecializacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\repositories\\cursoalunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\repositories\\cursoalunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\interfaces\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\interfaces\\ialunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\interfaces\\icursorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\interfaces\\icursorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|c:\\users\\23969368839\\documents\\vhburguer\\api\\learnhomeapi\\learnhomeapi\\interfaces\\icursoalunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847DBFC7-B69A-490D-855C-49EE90BD5F7E}|LearnHomeAPI\\LearnHomeAPI.csproj|solutionrelative:learnhomeapi\\interfaces\\icursoalunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Curso.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Curso.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Domains\\Curso.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Curso.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Domains\\Curso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:16:04.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CriarCursoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\CriarCursoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoDto\\CriarCursoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\CriarCursoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoDto\\CriarCursoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:47:02.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LerCursoDto.cs.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\LerCursoDto.cs.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoDto\\LerCursoDto.cs.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\LerCursoDto.cs.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoDto\\LerCursoDto.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:48:54.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AtualizarInstrutorDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\AtualizarInstrutorDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\InstrutorDto\\AtualizarInstrutorDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\AtualizarInstrutorDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\InstrutorDto\\AtualizarInstrutorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:45:50.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Instrutor.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Instrutor.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Domains\\Instrutor.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Instrutor.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Domains\\Instrutor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:16:11.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CriarInstrutorDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\CriarInstrutorDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\InstrutorDto\\CriarInstrutorDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\CriarInstrutorDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\InstrutorDto\\CriarInstrutorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:47:10.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LerInstrutorDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\LerInstrutorDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\InstrutorDto\\LerInstrutorDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\InstrutorDto\\LerInstrutorDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\InstrutorDto\\LerInstrutorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:41:55.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AtualizarCursoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\AtualizarCursoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoDto\\AtualizarCursoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoDto\\AtualizarCursoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoDto\\AtualizarCursoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:45:38.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CriarAreaCursoAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\CriarAreaCursoAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\CriarAreaCursoAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\CriarAreaCursoAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\CriarAreaCursoAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:40:31.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LerAreaCursoAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\LerAreaCursoAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\LerAreaCursoAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\LerAreaCursoAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\LerAreaCursoAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:40:48.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LerAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\LerAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AlunoDto\\LerAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\LerAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AlunoDto\\LerAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:38:40.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CriarAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\CriarAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AlunoDto\\CriarAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\CriarAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AlunoDto\\CriarAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:37:18.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AtualizarCursoAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\AtualizarCursoAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\AtualizarCursoAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\CursoAlunoDto\\AtualizarCursoAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\CursoAlunoDto\\AtualizarCursoAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:40:06.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CursoAluno.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\CursoAluno.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Domains\\CursoAluno.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\CursoAluno.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Domains\\CursoAluno.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:16:10.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LerAreaExpecializacaoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\LerAreaExpecializacaoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\LerAreaExpecializacaoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\LerAreaExpecializacaoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\LerAreaExpecializacaoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:39:16.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AreaExpecializacao.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\AreaExpecializacao.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Domains\\AreaExpecializacao.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\AreaExpecializacao.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Domains\\AreaExpecializacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:16:04.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CriarAreaExpecializacaoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\CriarAreaExpecializacaoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\CriarAreaExpecializacaoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\CriarAreaExpecializacaoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\CriarAreaExpecializacaoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:39:10.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AtualizarAreaExpecializacaoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\AtualizarAreaExpecializacaoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\AtualizarAreaExpecializacaoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\AtualizarAreaExpecializacaoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AreaExpecializacaoDto\\AtualizarAreaExpecializacaoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:38:50.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InstrutorService.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Applications\\Service\\InstrutorService.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Applications\\Service\\InstrutorService.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Applications\\Service\\InstrutorService.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Applications\\Service\\InstrutorService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:08:07.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AtualizarAlunoDto.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\AtualizarAlunoDto.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\DTOs\\AlunoDto\\AtualizarAlunoDto.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\DTOs\\AlunoDto\\AtualizarAlunoDto.cs",
+              "RelativeToolTip": "LearnHomeAPI\\DTOs\\AlunoDto\\AtualizarAlunoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:38:17.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Aluno.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Domains\\Aluno.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Domains\\Aluno.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Domains\\Aluno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:37:15.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CursoService.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Applications\\Service\\CursoService.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Applications\\Service\\CursoService.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Applications\\Service\\CursoService.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Applications\\Service\\CursoService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowDUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:31:26.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DomainException.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Exceptions\\DomainException.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Exceptions\\DomainException.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Exceptions\\DomainException.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Exceptions\\DomainException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:22:43.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\AlunoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Repositories\\AlunoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\AlunoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Repositories\\AlunoRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:35:28.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CursoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\CursoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Repositories\\CursoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\CursoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Repositories\\CursoRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:21:44.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IInstrutorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IInstrutorRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Interfaces\\IInstrutorRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IInstrutorRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Interfaces\\IInstrutorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:11:07.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InstrutorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\InstrutorRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Repositories\\InstrutorRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\InstrutorRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Repositories\\InstrutorRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowDcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:19:33.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AreaExpecializacaoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\AreaExpecializacaoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Repositories\\AreaExpecializacaoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\AreaExpecializacaoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Repositories\\AreaExpecializacaoRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:41:05.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LearnHomeDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Contexts\\LearnHomeDbContext.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Contexts\\LearnHomeDbContext.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Contexts\\LearnHomeDbContext.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Contexts\\LearnHomeDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:05:09.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IAreaExpecializacaoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IAreaExpecializacaoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Interfaces\\IAreaExpecializacaoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IAreaExpecializacaoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Interfaces\\IAreaExpecializacaoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:14:18.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CursoAlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\CursoAlunoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Repositories\\CursoAlunoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Repositories\\CursoAlunoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Repositories\\CursoAlunoRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:39:51.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IAlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IAlunoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Interfaces\\IAlunoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\IAlunoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Interfaces\\IAlunoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:13:08.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ICursoAlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\ICursoAlunoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Interfaces\\ICursoAlunoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\ICursoAlunoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Interfaces\\ICursoAlunoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:17:02.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ICursoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\ICursoRepository.cs",
+              "RelativeDocumentMoniker": "LearnHomeAPI\\Interfaces\\ICursoRepository.cs",
+              "ToolTip": "C:\\Users\\23969368839\\Documents\\VhBurguer\\API\\LearnHomeAPI\\LearnHomeAPI\\Interfaces\\ICursoRepository.cs",
+              "RelativeToolTip": "LearnHomeAPI\\Interfaces\\ICursoRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:12:13.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
