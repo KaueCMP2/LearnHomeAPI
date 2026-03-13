@@ -1,0 +1,16 @@
+﻿using LearnHomeAPI.Domains;
+
+namespace LearnHomeAPI.Interfaces
+{
+    public interface IAlunoRepository
+    {
+        List<Aluno> Listar();
+        Aluno ObterPorId(int id);
+        Aluno ObterPorNome(string nome);
+        Aluno ObterPorEmail (string email);
+        bool AlunoExiste (string nome);
+        void Adicionar(Aluno aluno);
+        void Atualizar(int id, Aluno aluno);
+        void Remover(int id);
+    }
+}
