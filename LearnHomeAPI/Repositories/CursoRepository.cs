@@ -23,9 +23,10 @@ namespace LearnHomeAPI.Repositories
             return ctx.Curso.FirstOrDefault(c => c.Id == id);
         }
 
-        public Curso ObterPorNome(string nome)
+        public List<Curso> ObterPorNome(string nome)
         {
-            return ctx.Curso.FirstOrDefault(c => c.Nome == nome);
+            return ctx.Curso.Where(a => a.Nome.Contains(nome)).ToList();
+
         }
 
 
@@ -44,11 +45,11 @@ namespace LearnHomeAPI.Repositories
             cursoExistente.Nome = curso.Nome;
             cursoExistente.Descricao = curso.Descricao;
 
-            Instrutor instrutorCurso = ctx.Instrutor.FirstOrDefault(i => i.Id == InstrutorId);
-            if (instrutorCurso == null)
+            Instrutor InstrutorCurso = ctx.Instrutor.FirstOrDefault(i => i.Id == InstrutorId);
+            if (InstrutorCurso == null)
                 return;
 
-            cursoExistente.Instrutor = (ICollection<Instrutor>)instrutorCurso;
+            cursoExistente.Instrutor = (ICollection<Instrutor>)InstrutorCurso;
             ctx.SaveChanges();
         }
 

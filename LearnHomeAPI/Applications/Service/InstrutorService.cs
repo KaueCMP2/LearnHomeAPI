@@ -13,21 +13,24 @@ namespace LearnHomeAPI.Applications.Service
     public class InstrutorService
     {
         private readonly IInstrutorRepository _repository;
-        public InstrutorService(IInstrutorRepository instrutorRepository)
+        private readonly IAreaEspecializacaoRepository _areaRepository;
+        public InstrutorService(IInstrutorRepository InstrutorRepository, IAreaEspecializacaoRepository areaEspecializacaoRepository)
         {
-            _repository = instrutorRepository;
+            _repository = InstrutorRepository;
+            _areaRepository = areaEspecializacaoRepository;
         }
 
         public LerInstrutorDto ConverterInstrutorParaDto(Instrutor instrutor)
         {
-            var instrutorDto = new LerInstrutorDto
+            var area = _areaRepository.ObterPorId(instrutor.AreaEspecializacaoId); 
+            var InstrutorDto = new LerInstrutorDto
             {
-                Id = instrutor.Id,
                 Nome = instrutor.Nome,
                 Email = instrutor.Email,
-                EspecializacaoNome = instrutor.AreaEspecializacao.Area
+                AreaEspecializacaoId = area.Id,
+                AreaEspecializacao = area
             };
-            return instrutorDto;
+            return InstrutorDto;
         }
 
         private static byte[] HashSenha(string senha)
@@ -38,91 +41,96 @@ namespace LearnHomeAPI.Applications.Service
             using var sha256 = SHA256.Create();
             return sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
         }
-            
+
         public List<LerInstrutorDto> Listar()
         {
-            List<Instrutor> instrutores = _repository.Listar();
-            if (instrutores == null || instrutores.Count == 0)
-                throw new DomainException("Nenhum instrutor para ser listado!");
+            List<Instrutor> Instrutores = _repository.Listar();
+            if (Instrutores == null)
+                throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            List<LerInstrutorDto> instrutorDtos = instrutores.Select(instrutoresSelecionados => ConverterInstrutorParaDto(instrutoresSelecionados))
+            List<LerInstrutorDto> InstrutorDtos = Instrutores.Select(InstrutoresSelecionados => ConverterInstrutorParaDto(InstrutoresSelecionados))
                 .ToList();
 
-            return instrutorDtos;
+            return InstrutorDtos;
         }
 
         public LerInstrutorDto ObterPorId(int id)
         {
-            Instrutor instrutor = _repository.ObterPorId(id);
-            if (instrutor == null)
-                throw new DomainException("Nenhum instrutor para ser listado!");
+            Instrutor Instrutor = _repository.ObterPorId(id);
+            if (Instrutor == null)
+                throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            LerInstrutorDto instrutorDto = ConverterInstrutorParaDto(instrutor);
+            LerInstrutorDto InstrutorDto = ConverterInstrutorParaDto(Instrutor);
 
-            return instrutorDto;
+            return InstrutorDto;
         }
 
-        public LerInstrutorDto ObterPorNome(string nome)
+        public List<LerInstrutorDto> ObterPorNome(string nome)
         {
-            Instrutor instrutor = _repository.ObterPorNome(nome);
+            List<Instrutor> instrutor = _repository.ObterPorNome(nome);
             if (instrutor == null)
-                throw new DomainException("Nenhum instrutor para ser listado!");
+                throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            LerInstrutorDto instrutorDto = ConverterInstrutorParaDto(instrutor);
+            List<LerInstrutorDto> InstrutoresDto = instrutor.Select(instrutorSeleiconado => ConverterInstrutorParaDto(instrutorSeleiconado))
+                .ToList();
 
-            return instrutorDto;
+            return InstrutoresDto;
         }
 
-        public LerInstrutorDto ObterPorEmail(string email)
+        public List<LerInstrutorDto> ObterPorEmail(string email)
         {
-            Instrutor instrutor = _repository.ObterPorEmail(email);
+            List<Instrutor> instrutor = _repository.ObterPorEmail(email);
             if (instrutor == null)
-                throw new DomainException("Nenhum instrutor para encontrado!");
+                throw new DomainException("Nenhum Instrutor para encontrado!");
 
-            LerInstrutorDto instrutorDto = ConverterInstrutorParaDto(instrutor);
-            return instrutorDto;
+            List<LerInstrutorDto> InstrutorDto = instrutor.Select(instrutorSelecionado => ConverterInstrutorParaDto(instrutorSelecionado))
+                .ToList();
+
+            return InstrutorDto;
         }
 
-        public Instrutor ConverterDtoParaInstrutor(AdicionarInstrutorDto instrutorDto)
+
+
+        public Instrutor ConverterDtoParaInstrutor(AdicionarInstrutorDto InstrutorDto)
         {
-            Instrutor instrutorConvert = new Instrutor
+            Instrutor InstrutorConvert = new Instrutor
             {
-                Id = instrutorDto.Id,
-                Nome = instrutorDto.Nome,
-                Email = instrutorDto.Email,
-                Senha = HashSenha(instrutorDto.Senha)
+                Nome = InstrutorDto.Nome,
+                Email = InstrutorDto.Email,
+                Senha = HashSenha(InstrutorDto.Senha)
             };
-            return instrutorConvert;
+            return InstrutorConvert;
         }
-        public void Adicionar(AdicionarInstrutorDto instrutor)
+        public LerInstrutorDto Adicionar(AdicionarInstrutorDto instrutor)
         {
-            Instrutor instrutorBanco = _repository.ObterPorNome(instrutor.Nome);
-            if (instrutorBanco != null)
-                throw new DomainException("Já existe um instrutor com esse nome!");
+            if (_repository.EmailExiste(instrutor.Email) == true)
+                throw new DomainException("Já existe um Instrutor com esse email!");
 
-            instrutorBanco = ConverterDtoParaInstrutor(instrutor);
+            var instrutorBanco = ConverterDtoParaInstrutor(instrutor);
             _repository.Adicionar(instrutorBanco);
+            return ConverterInstrutorParaDto(instrutorBanco);
         }
 
-        public void Atualizar(int id, AtualizarInstrutorDto instrutor)
+        public LerInstrutorDto Atualizar(int id, AtualizarInstrutorDto Instrutor)
         {
-            Instrutor instrutorBanco = _repository.ObterPorId(id);
-            if (instrutorBanco == null)
-                throw new DomainException("Nenhum instrutor encontrado para ser atualizado!");
+            Instrutor InstrutorBanco = _repository.ObterPorId(id);
+            if (InstrutorBanco == null)
+                throw new DomainException("Nenhum Instrutor encontrado para ser atualizado!");
 
-            instrutorBanco.Nome = instrutor.Nome;
-            instrutorBanco.Email = instrutor.Email;
-            instrutorBanco.Senha = HashSenha(instrutor.senha);
-            instrutorBanco.AreaEspecializacao = instrutor.AreaEspecializacao;
+            InstrutorBanco.Nome = Instrutor.Nome;
+            InstrutorBanco.Email = Instrutor.Email;
+            InstrutorBanco.Senha = HashSenha(Instrutor.senha);
+            InstrutorBanco.AreaEspecializacao = Instrutor.AreaEspecializacao;
 
-            _repository.Atualizar(id, instrutorBanco);
+            _repository.Atualizar(id, InstrutorBanco);
+            return ConverterInstrutorParaDto(InstrutorBanco);
         }
 
         public void Remover(int id)
         {
-            Instrutor instrutorBanco = _repository.ObterPorId(id);
-            if (instrutorBanco == null)
-                throw new DomainException("Nenhum instrutor encontrado para ser removido!");
+            Instrutor InstrutorBanco = _repository.ObterPorId(id);
+            if (InstrutorBanco == null)
+                throw new DomainException("Nenhum Instrutor encontrado para ser removido!");
 
             _repository.Remover(id);
         }

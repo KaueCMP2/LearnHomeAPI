@@ -19,47 +19,54 @@ namespace LearnHomeAPI.Repositories
 
         public Instrutor ObterPorId(int id)
         {
-            return ctx.Instrutor.FirstOrDefault(i => i.Id == id);
+            return ctx.Instrutor.Find(id);
         }
 
-        public Instrutor ObterPorNome(string nome)
+        public List<Instrutor> ObterPorNome(string nome)
         {
-            return ctx.Instrutor.FirstOrDefault(i => i.Nome == nome);
+            return ctx.Instrutor.Where(a => a.Nome.Contains(nome)).ToList();
+
         }
 
-        public Instrutor ObterPorEmail(string email)
+        public List<Instrutor> ObterPorEmail(string email)
         {
-            return ctx.Instrutor.FirstOrDefault(i => i.Email == email);
+            return ctx.Instrutor.Where(i => i.Email.Contains(email)).ToList();
         }
+
+        public bool EmailExiste(string email)
+        {
+            return ctx.Instrutor.Any(i => i.Email == email);
+        }
+
 
         public bool InstrutorExiste(string email)
         {
             return ctx.Instrutor.Any(i => i.Email == email);
         }
 
-        public void Adicionar(Instrutor instrutor)
+        public void Adicionar(Instrutor Instrutor)
         {
-            ctx.Instrutor.Add(instrutor);
+            ctx.Instrutor.Add(Instrutor);
             ctx.SaveChanges();
         }
 
-        public void Atualizar(int id, Instrutor instrutor)
+        public void Atualizar(int id, Instrutor Instrutor)
         {
-            var instrutorExistente = ctx.Instrutor.FirstOrDefault(i => i.Id == id);
-            if (instrutorExistente != null)
+            var InstrutorExistente = ctx.Instrutor.FirstOrDefault(i => i.Id == id);
+            if (InstrutorExistente != null)
             {
-                instrutorExistente.Nome = instrutor.Nome;
-                instrutorExistente.AreaEspecializacaoId = instrutor.AreaEspecializacaoId;
+                InstrutorExistente.Nome = Instrutor.Nome;
+                InstrutorExistente.AreaEspecializacaoId = Instrutor.AreaEspecializacaoId;
                 ctx.SaveChanges();
             }
         }
 
         public void Remover(int id)
         {
-            var instrutor = ctx.Instrutor.FirstOrDefault(i => i.Id == id);
-            if (instrutor != null)
+            var Instrutor = ctx.Instrutor.FirstOrDefault(i => i.Id == id);
+            if (Instrutor != null)
             {
-                ctx.Instrutor.Remove(instrutor);
+                ctx.Instrutor.Remove(Instrutor);
                 ctx.SaveChanges();
             }
         }

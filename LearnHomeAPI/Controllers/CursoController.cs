@@ -29,7 +29,7 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("curosId/{id}")]
         public IActionResult ObterPorId(int id)
         {
             try
@@ -43,12 +43,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("{nome}")]
+        [HttpGet("cursoNome/{nome}")]
         public IActionResult ObterPorId(string nome)
         {
             try
             {
-                LerCursoDto cursoDto = _service.ObterPorNome(nome);
+                List<LerCursoDto> cursoDto = _service.ObterPorNome(nome);
                 return Ok(cursoDto);
             }
             catch (Exception ex)
@@ -58,7 +58,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Adicionar(AdicionarCursoDto cursoDto)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Adicionar([FromForm] AdicionarCursoDto cursoDto)
         {
             try
             {
@@ -71,12 +72,13 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpPut("cursoId/{cursoId}/instrutorId/{instrutorId}")]
-        public IActionResult Atualizar(int cursoId, int instrutorId, AtualizarCursoDto cursoDto)
+        [HttpPut("cursoId/{cursoId}/InstrutorId/{InstrutorId}")]
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Atualizar([FromForm] int cursoId, int InstrutorId, AtualizarCursoDto cursoDto)
         {
             try
             {
-                _service.Atualizar(cursoId, instrutorId, cursoDto);
+                _service.Atualizar(cursoId, InstrutorId, cursoDto);
                 return NoContent();
             }
             catch (Exception ex)

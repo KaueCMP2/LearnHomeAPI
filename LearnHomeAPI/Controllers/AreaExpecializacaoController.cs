@@ -8,10 +8,10 @@ namespace LearnHomeAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AreaExpecializacaoController : ControllerBase
+    public class AreaEspecializacaoController : ControllerBase
     {
         private readonly AreaEspecializacaoService _service;
-        public AreaExpecializacaoController(AreaEspecializacaoService service)
+        public AreaEspecializacaoController(AreaEspecializacaoService service)
         {
             _service = service;
         }
@@ -44,12 +44,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
         
-        [HttpGet("{nome}")]
-        public IActionResult ObterPorNome(string nome)
+        [HttpGet("nomeAreaEspecializaco/{nome}")]
+        public IActionResult ObterPorNome([FromForm] string nome)
         {
             try
             {
-                LerAreaEspecializacaoDto areaDto = _service.ObterPorNome(nome);
+                List<LerAreaEspecializacaoDto> areaDto = _service.ObterPorNome(nome);
                 return Ok(areaDto);
             }
             catch (Exception ex)

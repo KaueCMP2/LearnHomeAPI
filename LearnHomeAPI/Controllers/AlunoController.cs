@@ -17,7 +17,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Listar()
+        public ActionResult Listar()
         {
             try
             {
@@ -31,7 +31,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult ObterPorId(int id)
+        public ActionResult ObterPorId(int id)
         {
             try
             {
@@ -44,12 +44,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("{nome}")]
-        public IActionResult ObterPorNome(string nome)
+        [HttpGet("nomeAluno/{nome}")]
+        public ActionResult ObterPorNome(string nome)
         {
             try
             {
-                LerAlunoDto alunoDto = _service.ObterPorNome(nome);
+                List<LerAlunoDto> alunoDto = _service.ObterPorNome(nome);
                 return Ok(alunoDto);
             }
             catch (Exception ex)
@@ -58,12 +58,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("{email}")]
-        public IActionResult ObterPorEmail(string email)
+        [HttpGet("emailAluno/{email}")]
+        public ActionResult ObterPorEmail(string email)
         {
             try
             {
-                LerAlunoDto alunoDto = _service.ObterPorEmail(email);
+                List<LerAlunoDto> alunoDto = _service.ObterPorEmail(email);
                 return Ok(alunoDto);
             }
             catch (Exception ex)
@@ -73,7 +73,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Adicionar(AdicionarAlunoDto adicionarAluno)
+        [Consumes("multipart/form-data")]
+        public ActionResult Adicionar([FromForm] AdicionarAlunoDto adicionarAluno)
         {
             try
             {
@@ -87,7 +88,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, AtualizarAlunoDto alunoDto)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public ActionResult Atualizar([FromForm] int id, AtualizarAlunoDto alunoDto)
         {
             try
             {
@@ -101,7 +103,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Remover(int id)
+        public ActionResult Remover(int id)
         {
             try
             {

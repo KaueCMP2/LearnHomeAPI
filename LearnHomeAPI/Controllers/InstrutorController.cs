@@ -22,8 +22,8 @@ namespace LearnHomeAPI.Controllers
         {
             try
             {
-                List<LerInstrutorDto> instrutores = _service.Listar();
-                return Ok(instrutores);
+                List<LerInstrutorDto> Instrutores = _service.Listar();
+                return Ok(Instrutores);
             }
             catch (Exception ex)
             {
@@ -36,8 +36,8 @@ namespace LearnHomeAPI.Controllers
         {
             try
             {
-                LerInstrutorDto instrutor = _service.ObterPorId(id);
-                return Ok();
+                LerInstrutorDto Instrutor = _service.ObterPorId(id);
+                return Ok(Instrutor);
             }
             catch (Exception ex)
             {
@@ -45,12 +45,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
         
-        [HttpGet("{nome}")]
+        [HttpGet("instrutorNome/{nome}")]
         public IActionResult ObterPorId(string nome)
         {
             try
             {
-                LerInstrutorDto instrutor = _service.ObterPorNome(nome);
+                List<LerInstrutorDto> Instrutor = _service.ObterPorNome(nome);
                 return Ok();
             }
             catch (Exception ex)
@@ -59,12 +59,12 @@ namespace LearnHomeAPI.Controllers
             }
         }
         
-        [HttpGet("{email}")]
+        [HttpGet("instrutorEmail/{email}")]
         public IActionResult ObterPorEmail(string email)
         {
             try
             {
-                LerInstrutorDto instrutor = _service.ObterPorEmail(email);
+                List<LerInstrutorDto> Instrutor = _service.ObterPorEmail(email);
                 return Ok();
             }
             catch (Exception ex)
@@ -74,11 +74,12 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Adicionar(AdicionarInstrutorDto instrutor)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Adicionar([FromForm] AdicionarInstrutorDto Instrutor)
         {
             try
             {
-                _service.Adicionar(instrutor);
+                _service.Adicionar(Instrutor);
                 return StatusCode(201);
             }
             catch (Exception ex)
@@ -88,11 +89,12 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, AtualizarInstrutorDto instrutor)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Atualizar([FromForm] int id, AtualizarInstrutorDto Instrutor)
         {
             try
             {
-                _service.Atualizar(id, instrutor);
+                _service.Atualizar(id, Instrutor);
                 return NoContent();
             }
             catch (Exception ex)

@@ -10,6 +10,9 @@ namespace LearnHomeAPI.DTOs.AlunoDto
 
         public string Email { get; set; } = null!;
 
-        public string EspecializacaoNome { get; set; }
+
+        public int AreaEspecializacaoId { get; set; }
+
+        public virtual AreaEspecializacao? AreaEspecializacao { get; set; }
     }
 }

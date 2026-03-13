@@ -6,6 +6,6 @@
 
         public string Email { get; set; } = null!;
 
-        public byte[]? Senha { get; set; }
+        public string Senha { get; set; }
     }
 }

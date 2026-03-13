@@ -13,13 +13,13 @@ namespace LearnHomeAPI.Applications.Service
             _repository = repository;
         }
 
-        public LerAreaEspecializacaoDto ConverterAreaEspecializacaoParaDto(AreaEspecializacao areaEspecializacao)
+        public LerAreaEspecializacaoDto ConverterAreaEspecializacaoParaDto(AreaEspecializacao AreaEspecializacao)
         {
             var area = new LerAreaEspecializacaoDto
             {
-                Id = areaEspecializacao.Id,
-                Area = areaEspecializacao.Area,
-                Instrutor = areaEspecializacao.Instrutor
+                Id = AreaEspecializacao.Id,
+                Area = AreaEspecializacao.Area,
+                Instrutor = AreaEspecializacao.Instrutor
             };
 
             return area;
@@ -48,15 +48,16 @@ namespace LearnHomeAPI.Applications.Service
             return areaDto;
         }
 
-        public LerAreaEspecializacaoDto ObterPorNome(string nome)
+        public List<LerAreaEspecializacaoDto> ObterPorNome(string nome)
         {
-            AreaEspecializacao area = _repository.ObterPorNome(nome);
-            LerAreaEspecializacaoDto areaDto = ConverterAreaEspecializacaoParaDto(area);
+            List<AreaEspecializacao> area = _repository.ObterPorNome(nome);
+            List<LerAreaEspecializacaoDto> areasDto = area.Select(areaSelecionada => ConverterAreaEspecializacaoParaDto(areaSelecionada))
+                .ToList();
 
-            if (areaDto == null)
+            if (areasDto == null)
                 throw new DomainException("Nenhuma area encontrada!");
 
-            return areaDto;
+            return areasDto;
         }
     }
 }

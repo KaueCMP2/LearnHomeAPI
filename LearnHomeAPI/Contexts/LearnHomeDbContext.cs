@@ -28,15 +28,15 @@ public partial class LearnHomeDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=LearnHomeDb;Trusted_Connection=true;TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database=LearnHomeDb; Trusted_Connection=true; TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Aluno>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Aluno__3214EC07CD7FBFEA");
+            entity.HasKey(e => e.Id).HasName("PK__Aluno__3214EC07F39571BC");
 
-            entity.HasIndex(e => e.Email, "UQ__Aluno__A9D10534FDAD5CDA").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Aluno__A9D10534CE263A3C").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(80)
@@ -49,21 +49,18 @@ public partial class LearnHomeDbContext : DbContext
 
         modelBuilder.Entity<AreaEspecializacao>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__AreaExpe__3214EC07B10963E5");
+            entity.HasKey(e => e.Id).HasName("PK__AreaEspe__3214EC075DEF8CB1");
 
             entity.Property(e => e.Area).HasMaxLength(40);
         });
 
         modelBuilder.Entity<Curso>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Curso__3214EC070BE1F4D4");
+            entity.HasKey(e => e.Id).HasName("PK__Curso__3214EC077B6EAA7B");
 
-            entity.HasIndex(e => e.Nome, "UQ__Curso__7D8FE3B296900DCB").IsUnique();
+            entity.HasIndex(e => e.Nome, "UQ__Curso__7D8FE3B26EA5203A").IsUnique();
 
-            entity.Property(e => e.CargaHoraria).HasColumnType("datetime");
-            entity.Property(e => e.Nome)
-                .HasMaxLength(80)
-                .IsUnicode(false);
+            entity.Property(e => e.Nome).HasMaxLength(80);
         });
 
         modelBuilder.Entity<CursoAluno>(entity =>
@@ -86,9 +83,9 @@ public partial class LearnHomeDbContext : DbContext
 
         modelBuilder.Entity<Instrutor>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Instruto__3214EC0762DCC8F1");
+            entity.HasKey(e => e.Id).HasName("PK__Instruto__3214EC077CC47DFD");
 
-            entity.HasIndex(e => e.Email, "UQ__Instruto__A9D10534D9E42B32").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Instruto__A9D10534EB9B00E4").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(80)
@@ -108,13 +105,13 @@ public partial class LearnHomeDbContext : DbContext
                     "InstrutorCurso",
                     r => r.HasOne<Curso>().WithMany()
                         .HasForeignKey("CursoId")
-                        .HasConstraintName("FK_instrutorCurso_CursoId"),
+                        .HasConstraintName("FK_InstrutorCurso_CursoId"),
                     l => l.HasOne<Instrutor>().WithMany()
-                        .HasForeignKey("instrutorId")
-                        .HasConstraintName("FK_instrutorCurso_InstrutorId"),
+                        .HasForeignKey("InstrutorId")
+                        .HasConstraintName("FK_InstrutorCurso_InstrutorId"),
                     j =>
                     {
-                        j.HasKey("instrutorId", "CursoId").HasName("PK_instrutorCurso_InstrutorId_CursoId");
+                        j.HasKey("InstrutorId", "CursoId").HasName("PK_InstrutorCurso_InstrutorId_CursoId");
                     });
         });
 

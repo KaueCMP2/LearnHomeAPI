@@ -6,8 +6,8 @@ namespace LearnHomeAPI.Interfaces
     {
         List<Aluno> Listar();
         Aluno ObterPorId(int id);
-        Aluno ObterPorNome(string nome);
-        Aluno ObterPorEmail (string email);
+        List<Aluno> ObterPorNome(string nome);
+        List<Aluno> ObterPorEmail (string email);
         bool AlunoExiste (string nome);
         void Adicionar(Aluno aluno);
         void Atualizar(int id, Aluno aluno);

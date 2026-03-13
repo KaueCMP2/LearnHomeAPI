@@ -6,6 +6,6 @@ namespace LearnHomeAPI.Interfaces
     {
         List<AreaEspecializacao> Listar();
         AreaEspecializacao ObterPorId(int id);
-        AreaEspecializacao ObterPorNome(string nome);
+        List<AreaEspecializacao> ObterPorNome(string nome);
     }
 }

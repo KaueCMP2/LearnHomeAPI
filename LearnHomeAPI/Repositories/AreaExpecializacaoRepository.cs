@@ -22,9 +22,9 @@ namespace LearnHomeAPI.Repositories
             return ctx.AreaEspecializacao.FirstOrDefault(a => a.Id == id);
         }
 
-        public AreaEspecializacao ObterPorNome(string nome)
+        public List<AreaEspecializacao> ObterPorNome(string nome)
         {
-            return ctx.AreaEspecializacao.FirstOrDefault(a => a.Area == nome);
+            return ctx.AreaEspecializacao.Where(a => a.Area.Contains(nome)).ToList();
         }
     }
 }

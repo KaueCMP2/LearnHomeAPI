@@ -6,11 +6,12 @@ namespace LearnHomeAPI.Interfaces
     {
         List<Instrutor> Listar();
         Instrutor ObterPorId(int id);
-        Instrutor ObterPorNome(string nome);
-        Instrutor ObterPorEmail(string email);
+        List<Instrutor> ObterPorNome(string nome);
+        List<Instrutor> ObterPorEmail(string email);
+        bool EmailExiste(string email);
         bool InstrutorExiste(string email);
-        void Adicionar(Instrutor instrutor);
-        void Atualizar(int id, Instrutor instrutor);
+        void Adicionar(Instrutor Instrutor);
+        void Atualizar(int id, Instrutor Instrutor);
         void Remover(int id);
     }
 }

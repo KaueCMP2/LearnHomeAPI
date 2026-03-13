@@ -8,6 +8,6 @@ namespace LearnHomeAPI.DTOs.AlunoDto
 
         public string? Area { get; set; }
 
-        public int instrutorId { get; set; }
+        public int InstrutorId { get; set; }
     }
 }

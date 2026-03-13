@@ -6,9 +6,9 @@ namespace LearnHomeAPI.Interfaces
     {
         List<Curso> Listar();
         Curso ObterPorId(int id);
-        Curso ObterPorNome(string nome);
+        List<Curso> ObterPorNome(string nome);
         void Adicionar(Curso curso);
-        void Atualizar(int cursoId, int instrutorId,Curso curso);
+        void Atualizar(int cursoId, int InstrutorId,Curso curso);
         void Remover(int id);
     }
 }

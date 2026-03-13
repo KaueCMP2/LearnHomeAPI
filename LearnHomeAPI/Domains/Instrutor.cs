@@ -13,7 +13,7 @@ public partial class Instrutor
 
     public byte[]? Senha { get; set; }
 
-    public int? AreaEspecializacaoId { get; set; }
+    public int AreaEspecializacaoId { get; set; }
 
     public virtual AreaEspecializacao? AreaEspecializacao { get; set; }
 

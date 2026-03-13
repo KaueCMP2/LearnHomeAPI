@@ -20,7 +20,7 @@ builder.Services.AddDbContext<LearnHomeDbContext>(options => options.UseSqlServe
 builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
 builder.Services.AddScoped<AlunoService>();
 
-//AreaExpecializacao
+//AreaEspecializacao
 builder.Services.AddScoped<IAreaEspecializacaoRepository, AreaEspecializacaoRepository>();
 builder.Services.AddScoped<AreaEspecializacaoService>();
 

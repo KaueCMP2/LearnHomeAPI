@@ -31,7 +31,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpGet("cursoId/{cursoId}/alunoId/{alunoId}")]
-        public IActionResult ObterPorId(int cursoId, int alunoId)
+        public IActionResult ObterPorId([FromForm] int cursoId, int alunoId)
         {
             try
             {
@@ -45,7 +45,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Adicionar(AdicionarCursoAlunoDto cursoAlunoDto)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Adicionar([FromForm] AdicionarCursoAlunoDto cursoAlunoDto)
         {
             try
             {
@@ -58,8 +59,9 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpPut]
-        public IActionResult Atualizar(int cursoId, int alunoId, AtualizarCursoAlunoDto cursoAlunoDto)
+        [HttpPut("cursoId/{cursoId}/alunoId/{alunoId}")]
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Atualizar([FromForm] int cursoId, int alunoId, AtualizarCursoAlunoDto cursoAlunoDto)
         {
             try
             {
@@ -73,7 +75,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpDelete("cursoId/{cursoId}/alunoId/{alunoId}")]
-        public IActionResult Remover(int cursoId, int alunoId)
+        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
+        public IActionResult Remover([FromForm] int cursoId, int alunoId)
         {
             try
             {
