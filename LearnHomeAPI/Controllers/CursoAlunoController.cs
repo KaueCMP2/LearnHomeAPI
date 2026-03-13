@@ -35,8 +35,7 @@ namespace LearnHomeAPI.Controllers
         {
             try
             {
-                LerCursoAlunoDto cursoAluno = _service.ObterPorId(cursoId, alunoId);
-                return Ok(cursoAluno);
+                return Ok(_service.ObterPorId(cursoId, alunoId));
             }
             catch (Exception ex)
             {

@@ -19,7 +19,7 @@ namespace LearnHomeAPI.Repositories
 
         public Instrutor ObterPorId(int id)
         {
-            return ctx.Instrutor.Find(id);
+            return ctx.Instrutor.FirstOrDefault(i => i.Id == id);
         }
 
         public List<Instrutor> ObterPorNome(string nome)

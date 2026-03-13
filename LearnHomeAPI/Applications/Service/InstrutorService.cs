@@ -22,13 +22,12 @@ namespace LearnHomeAPI.Applications.Service
 
         public LerInstrutorDto ConverterInstrutorParaDto(Instrutor instrutor)
         {
-            var area = _areaRepository.ObterPorId(instrutor.AreaEspecializacaoId); 
             var InstrutorDto = new LerInstrutorDto
             {
+                Id = instrutor.Id,
                 Nome = instrutor.Nome,
                 Email = instrutor.Email,
-                AreaEspecializacaoId = area.Id,
-                AreaEspecializacao = area
+                AreaEspecializacaoId = (int)instrutor.AreaEspecializacaoId,
             };
             return InstrutorDto;
         }
@@ -48,10 +47,13 @@ namespace LearnHomeAPI.Applications.Service
             if (Instrutores == null)
                 throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            List<LerInstrutorDto> InstrutorDtos = Instrutores.Select(InstrutoresSelecionados => ConverterInstrutorParaDto(InstrutoresSelecionados))
+            List<LerInstrutorDto> InstrutoresDtos = Instrutores.Select(InstrutoresSelecionados => ConverterInstrutorParaDto(InstrutoresSelecionados))
                 .ToList();
+            if (InstrutoresDtos == null)
+                throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            return InstrutorDtos;
+
+            return InstrutoresDtos;
         }
 
         public LerInstrutorDto ObterPorId(int id)
@@ -89,8 +91,6 @@ namespace LearnHomeAPI.Applications.Service
             return InstrutorDto;
         }
 
-
-
         public Instrutor ConverterDtoParaInstrutor(AdicionarInstrutorDto InstrutorDto)
         {
             Instrutor InstrutorConvert = new Instrutor
@@ -103,10 +103,16 @@ namespace LearnHomeAPI.Applications.Service
         }
         public LerInstrutorDto Adicionar(AdicionarInstrutorDto instrutor)
         {
-            if (_repository.EmailExiste(instrutor.Email) == true)
+            if (_repository.EmailExiste(instrutor.Email))
                 throw new DomainException("Já existe um Instrutor com esse email!");
 
-            var instrutorBanco = ConverterDtoParaInstrutor(instrutor);
+            Instrutor instrutorBanco = new Instrutor
+            {
+                Nome = instrutor.Nome,
+                Email = instrutor.Email,
+                Senha = HashSenha(instrutor.Senha),
+                AreaEspecializacaoId = instrutor.AreaEspecializacaoId
+            };
             _repository.Adicionar(instrutorBanco);
             return ConverterInstrutorParaDto(instrutorBanco);
         }
@@ -120,7 +126,7 @@ namespace LearnHomeAPI.Applications.Service
             InstrutorBanco.Nome = Instrutor.Nome;
             InstrutorBanco.Email = Instrutor.Email;
             InstrutorBanco.Senha = HashSenha(Instrutor.senha);
-            InstrutorBanco.AreaEspecializacao = Instrutor.AreaEspecializacao;
+            InstrutorBanco.AreaEspecializacao.Id = Instrutor.AreaEspecializacaoId;
 
             _repository.Atualizar(id, InstrutorBanco);
             return ConverterInstrutorParaDto(InstrutorBanco);

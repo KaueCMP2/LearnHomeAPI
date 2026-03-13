@@ -74,8 +74,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public IActionResult Adicionar([FromForm] AdicionarInstrutorDto Instrutor)
+        public ActionResult<AdicionarInstrutorDto> Adicionar(AdicionarInstrutorDto Instrutor)
         {
             try
             {
@@ -89,8 +88,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public IActionResult Atualizar([FromForm] int id, AtualizarInstrutorDto Instrutor)
+        public ActionResult<AtualizarInstrutorDto> Atualizar(int id, AtualizarInstrutorDto Instrutor)
         {
             try
             {
