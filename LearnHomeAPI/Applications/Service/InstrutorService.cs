@@ -27,7 +27,8 @@ namespace LearnHomeAPI.Applications.Service
                 Id = instrutor.Id,
                 Nome = instrutor.Nome,
                 Email = instrutor.Email,
-                AreaEspecializacaoId = (int)instrutor.AreaEspecializacaoId,
+                AreaEspecializacaoId = instrutor.AreaEspecializacaoId ?? 0,
+                AreaEspecializacao = instrutor.AreaEspecializacao
             };
             return InstrutorDto;
         }
@@ -123,10 +124,15 @@ namespace LearnHomeAPI.Applications.Service
             if (InstrutorBanco == null)
                 throw new DomainException("Nenhum Instrutor encontrado para ser atualizado!");
 
+            var area = _areaRepository.ObterPorId(InstrutorBanco.Id);
+            if(area == null)
+                throw new DomainException("Nenhuma área encontrada!");
+
             InstrutorBanco.Nome = Instrutor.Nome;
             InstrutorBanco.Email = Instrutor.Email;
             InstrutorBanco.Senha = HashSenha(Instrutor.senha);
-            InstrutorBanco.AreaEspecializacao.Id = Instrutor.AreaEspecializacaoId;
+            InstrutorBanco.AreaEspecializacao = area;
+            InstrutorBanco.AreaEspecializacao.Id = area.Id;
 
             _repository.Atualizar(id, InstrutorBanco);
             return ConverterInstrutorParaDto(InstrutorBanco);
