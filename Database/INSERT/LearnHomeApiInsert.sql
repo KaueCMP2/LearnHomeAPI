@@ -2,7 +2,7 @@ USE LearnHomeDb
 GO
 
 -- Area de Especialização
-INSERT INTO AreaExpecializacao (Area) VALUES
+INSERT INTO AreaEspecializacao (Area) VALUES
 ('Programação'),
 ('Banco de Dados'),
 ('Redes'),
@@ -10,7 +10,7 @@ INSERT INTO AreaExpecializacao (Area) VALUES
 GO
 
 -- Instrutores
-INSERT INTO Instrutor (Nome, Email, Senha, AreaExpecializacaoId) VALUES
+INSERT INTO Instrutor (Nome, Email, Senha, AreaEspecializacaoId) VALUES
 ('Carlos Silva', 'carlos@learnhome.com', HASHBYTES('SHA2_256','123456'), 1),
 ('Mariana Souza', 'mariana@learnhome.com', HASHBYTES('SHA2_256','123456'), 2),
 ('João Pereira', 'joao@learnhome.com', HASHBYTES('SHA2_256','123456'), 3),
@@ -18,11 +18,11 @@ INSERT INTO Instrutor (Nome, Email, Senha, AreaExpecializacaoId) VALUES
 GO
 
 -- Cursos
-INSERT INTO Curso (Nome, Descricao, CargaHoraria) VALUES
-('C# Básico', 'Curso introdutório de C# e lógica de programação', 60),
-('SQL Server', 'Fundamentos de banco de dados com SQL Server', 60),
-('Redes de Computadores', 'Conceitos de redes e protocolos', 180),
-('UI/UX Design', 'Princípios de design de interface e experiência do usuário', 60);
+INSERT INTO Curso (Nome, Descricao, CargaHoraria, InstrutorId) VALUES
+('C# Básico', 'Curso introdutório de C# e lógica de programação', 60, 1),
+('SQL Server', 'Fundamentos de banco de dados com SQL Server', 60, 2),
+('Redes de Computadores', 'Conceitos de redes e protocolos', 180, 3),
+('UI/UX Design', 'Princípios de design de interface e experiência do usuário', 60, 4);
 GO
 
 -- Relação Instrutor x Curso
@@ -43,11 +43,11 @@ INSERT INTO Aluno (Nome, Email, Senha) VALUES
 GO
 
 -- Matrícula de alunos nos cursos
-INSERT INTO CursoAluno (CursoId, AlunoId, NumeroMatricula, StatusMatricula) VALUES
-(1,1,'MAT0001',1),
-(2,1,'MAT0002',1),
-(2,2,'MAT0003',1),
-(3,3,'MAT0004',1),
-(4,4,'MAT0005',1),
-(1,2,'MAT0006',0);
+INSERT INTO CursoAluno (CursoId, AlunoId) VALUES
+(1,1),
+(2,1),
+(2,2),
+(3,3),
+(4,4),
+(1,2);
 GO
