@@ -10,11 +10,11 @@ using System.Text;
 
 namespace LearnHomeAPI.Applications.Service
 {
-    public class InstrutorService
+    public class Instrutorervice
     {
         private readonly IInstrutorRepository _repository;
         private readonly IAreaEspecializacaoRepository _areaRepository;
-        public InstrutorService(IInstrutorRepository InstrutorRepository, IAreaEspecializacaoRepository areaEspecializacaoRepository)
+        public Instrutorervice(IInstrutorRepository InstrutorRepository, IAreaEspecializacaoRepository areaEspecializacaoRepository)
         {
             _repository = InstrutorRepository;
             _areaRepository = areaEspecializacaoRepository;
@@ -74,7 +74,7 @@ namespace LearnHomeAPI.Applications.Service
             if (instrutor == null)
                 throw new DomainException("Nenhum Instrutor para ser listado!");
 
-            List<LerInstrutorDto> InstrutoresDto = instrutor.Select(instrutorSeleiconado => ConverterInstrutorParaDto(instrutorSeleiconado))
+            List<LerInstrutorDto> InstrutoresDto = instrutor.Select(Instrutoreleiconado => ConverterInstrutorParaDto(Instrutoreleiconado))
                 .ToList();
 
             return InstrutoresDto;
@@ -86,7 +86,7 @@ namespace LearnHomeAPI.Applications.Service
             if (instrutor == null)
                 throw new DomainException("Nenhum Instrutor para encontrado!");
 
-            List<LerInstrutorDto> InstrutorDto = instrutor.Select(instrutorSelecionado => ConverterInstrutorParaDto(instrutorSelecionado))
+            List<LerInstrutorDto> InstrutorDto = instrutor.Select(Instrutorelecionado => ConverterInstrutorParaDto(Instrutorelecionado))
                 .ToList();
 
             return InstrutorDto;
@@ -114,6 +114,7 @@ namespace LearnHomeAPI.Applications.Service
                 Senha = HashSenha(instrutor.Senha),
                 AreaEspecializacaoId = instrutor.AreaEspecializacaoId
             };
+
             _repository.Adicionar(instrutorBanco);
             return ConverterInstrutorParaDto(instrutorBanco);
         }
@@ -124,7 +125,7 @@ namespace LearnHomeAPI.Applications.Service
             if (InstrutorBanco == null)
                 throw new DomainException("Nenhum Instrutor encontrado para ser atualizado!");
 
-            var area = _areaRepository.ObterPorId(InstrutorBanco.Id);
+            var area = _areaRepository.ObterPorId((int)InstrutorBanco.AreaEspecializacaoId);
             if(area == null)
                 throw new DomainException("Nenhuma área encontrada!");
 

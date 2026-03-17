@@ -18,23 +18,23 @@ builder.Services.AddDbContext<LearnHomeDbContext>(options => options.UseSqlServe
 
 //Aluno
 builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
-builder.Services.AddScoped<AlunoService>();
+builder.Services.AddScoped<Alunoervice>();
 
 //AreaEspecializacao
 builder.Services.AddScoped<IAreaEspecializacaoRepository, AreaEspecializacaoRepository>();
-builder.Services.AddScoped<AreaEspecializacaoService>();
+builder.Services.AddScoped<AreaEspecializacaoervice>();
 
 //Curso
 builder.Services.AddScoped<ICursoRepository, CursoRepository>();
-builder.Services.AddScoped<CursoService>();
+builder.Services.AddScoped<Cursoervice>();
 
 //Curso
 builder.Services.AddScoped<ICursoAlunoRepository, CursoAlunoRepository>();
-builder.Services.AddScoped < CursoAlunoService>();
+builder.Services.AddScoped < CursoAlunoervice>();
 
 //Instrutor
 builder.Services.AddScoped<IInstrutorRepository, InstrutorRepository>();
-builder.Services.AddScoped<InstrutorService>();
+builder.Services.AddScoped<Instrutorervice>();
 
 var app = builder.Build();
 

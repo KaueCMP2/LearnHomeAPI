@@ -28,15 +28,15 @@ public partial class LearnHomeDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database=LearnHomeDb; Trusted_Connection=true; TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=LearnHomeDb;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Aluno>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Aluno__3214EC07F39571BC");
+            entity.HasKey(e => e.Id).HasName("PK__Aluno__3214EC07A826E2FD");
 
-            entity.HasIndex(e => e.Email, "UQ__Aluno__A9D10534CE263A3C").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Aluno__A9D1053450E9141B").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(80)
@@ -49,18 +49,22 @@ public partial class LearnHomeDbContext : DbContext
 
         modelBuilder.Entity<AreaEspecializacao>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__AreaEspe__3214EC075DEF8CB1");
+            entity.HasKey(e => e.Id).HasName("PK__AreaEspe__3214EC07E0FE778A");
 
             entity.Property(e => e.Area).HasMaxLength(40);
         });
 
         modelBuilder.Entity<Curso>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Curso__3214EC077B6EAA7B");
+            entity.HasKey(e => e.Id).HasName("PK__Curso__3214EC0760D0FDCE");
 
-            entity.HasIndex(e => e.Nome, "UQ__Curso__7D8FE3B26EA5203A").IsUnique();
+            entity.HasIndex(e => e.Nome, "UQ__Curso__7D8FE3B2A74D7251").IsUnique();
 
             entity.Property(e => e.Nome).HasMaxLength(80);
+
+            entity.HasOne(d => d.Instrutor).WithMany(p => p.Curso)
+                .HasForeignKey(d => d.InstrutorId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
         });
 
         modelBuilder.Entity<CursoAluno>(entity =>
@@ -68,8 +72,9 @@ public partial class LearnHomeDbContext : DbContext
             entity.HasKey(e => new { e.CursoId, e.AlunoId }).HasName("PK_CursoAluno_CursoId_AlunoId");
 
             entity.Property(e => e.NumeroMatricula)
-                .HasMaxLength(7)
-                .IsUnicode(false);
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasDefaultValueSql("('CRAL'+right('0000'+CONVERT([varchar](4),NEXT VALUE FOR [SeqMatricula]),(4)))");
             entity.Property(e => e.StatusMatricula).HasDefaultValue(true);
 
             entity.HasOne(d => d.Aluno).WithMany(p => p.CursoAluno)
@@ -83,9 +88,9 @@ public partial class LearnHomeDbContext : DbContext
 
         modelBuilder.Entity<Instrutor>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Instruto__3214EC077CC47DFD");
+            entity.HasKey(e => e.Id).HasName("PK__Instruto__3214EC07ACB42FAF");
 
-            entity.HasIndex(e => e.Email, "UQ__Instruto__A9D10534EB9B00E4").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Instruto__A9D1053427C9473E").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(80)
@@ -100,20 +105,21 @@ public partial class LearnHomeDbContext : DbContext
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Instrtutor_AreaEspecializacao_AreaEspecializacaoId");
 
-            entity.HasMany(d => d.Curso).WithMany(p => p.Instrutor)
+            entity.HasMany(d => d.CursoNavigation).WithMany(p => p.Intrutor)
                 .UsingEntity<Dictionary<string, object>>(
                     "InstrutorCurso",
                     r => r.HasOne<Curso>().WithMany()
                         .HasForeignKey("CursoId")
-                        .HasConstraintName("FK_InstrutorCurso_CursoId"),
+                        .HasConstraintName("FK_IntrutorCurso_CursoId"),
                     l => l.HasOne<Instrutor>().WithMany()
-                        .HasForeignKey("InstrutorId")
-                        .HasConstraintName("FK_InstrutorCurso_InstrutorId"),
+                        .HasForeignKey("IntrutorId")
+                        .HasConstraintName("FK_IntrutorCurso_InstrutorId"),
                     j =>
                     {
-                        j.HasKey("InstrutorId", "CursoId").HasName("PK_InstrutorCurso_InstrutorId_CursoId");
+                        j.HasKey("IntrutorId", "CursoId").HasName("PK_IntrutorCurso_InstrutorId_CursoId");
                     });
         });
+        modelBuilder.HasSequence("SeqMatricula");
 
         OnModelCreatingPartial(modelBuilder);
     }

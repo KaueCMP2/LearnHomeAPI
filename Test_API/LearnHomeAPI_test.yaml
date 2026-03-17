@@ -1,0 +1,881 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: LearnHomeAPI
+meta:
+  id: wrk_828c1ab056b6426fa35abe565a5ad999
+  created: 1773703511577
+  modified: 1773703511577
+  description: ""
+collection:
+  - name: Aluno
+    meta:
+      id: fld_625c561e6161464a9e27a79d0a151508
+      created: 1773703519656
+      modified: 1773713607488
+      sortKey: -1773713601111
+      description: ""
+    children:
+      - url: https://localhost:7263/api/Aluno
+        name: Listar
+        meta:
+          id: req_98a51fcd982e403994e1883fde5e7c8b
+          created: 1773703532897
+          modified: 1773704338573
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744868
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno
+        name: Adicionar
+        meta:
+          id: req_6db70079c537497b80a7939b54a0b1ea
+          created: 1773703744768
+          modified: 1773704329039
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744768
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: Kaue
+              description: ""
+              disabled: false
+            - name: Email
+              value: kaue2@email.com
+              description: ""
+              disabled: false
+            - name: Senha
+              value: "123456"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno/1
+        name: Listar por ID
+        meta:
+          id: req_1d499eca72e84cfea842dc486cf7c206
+          created: 1773704340062
+          modified: 1773704851366
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744818
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno/1
+        name: Atualizar
+        meta:
+          id: req_c696651ee44c4b63a4f57726e7d09dd9
+          created: 1773704424865
+          modified: 1773704802639
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744668
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: nome
+              value: lk
+              description: ""
+              disabled: false
+            - name: email
+              value: lk@email.com
+              description: ""
+              disabled: false
+            - name: senha
+              value: "123456"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno/nomeAluno/lk
+        name: Listar por nome
+        meta:
+          id: req_73be7a2cac5c498592b091b6d84554ea
+          created: 1773704805668
+          modified: 1773704892546
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744793
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno/emailAluno/lk@
+        name: Listar por email
+        meta:
+          id: req_f31d94f82a80476f8fb62c7153997933
+          created: 1773704902688
+          modified: 1773705584966
+          isPrivate: false
+          description: ""
+          sortKey: -1773703744780.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Aluno/1
+        name: Remover
+        meta:
+          id: req_73096f0e51d24406b884fb390c38d82b
+          created: 1773713356290
+          modified: 1773713359774
+          isPrivate: false
+          description: ""
+          sortKey: -1773299942835.5
+        method: DELETE
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: nome
+              value: lk
+              description: ""
+              disabled: false
+            - name: email
+              value: lk@email.com
+              description: ""
+              disabled: false
+            - name: senha
+              value: "123456"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Área de especialização
+    meta:
+      id: fld_e98fe8218b6c47c8800260a25cda5925
+      created: 1773705631712
+      modified: 1773713394638
+      sortKey: -1773713389712
+      description: ""
+    children:
+      - url: https://localhost:7263/api/AreaEspecializacao
+        name: Listar
+        meta:
+          id: req_e4556f0d649445fdba2147b0dfd25709
+          created: 1773705647191
+          modified: 1773705792527
+          isPrivate: false
+          description: ""
+          sortKey: -1773705682698
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/AreaEspecializacao/1
+        name: Listar por ID
+        meta:
+          id: req_8c048cc6aba54ec6bfaead53b5aef7c4
+          created: 1773706289675
+          modified: 1773706302566
+          isPrivate: false
+          description: ""
+          sortKey: -1773705682598
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/AreaEspecializacao/nomeAreaEspecializacao/a
+        name: Listar por nome
+        meta:
+          id: req_32e62ec9fef1409a90941dbe08f14662
+          created: 1773706304420
+          modified: 1773706401630
+          isPrivate: false
+          description: ""
+          sortKey: -1773705682498
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Curso
+    meta:
+      id: fld_150d0748d57d4369a436f707f2ec53ec
+      created: 1773706437354
+      modified: 1773713399996
+      sortKey: -1773713389762
+      description: ""
+    children:
+      - url: https://localhost:7263/api/Curso
+        name: Listar
+        meta:
+          id: req_d6182e38ff2a4ae3ac062f8e1ccc0005
+          created: 1773706442232
+          modified: 1773706466168
+          isPrivate: false
+          description: ""
+          sortKey: -1773706458269
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Curso/CursoId/1
+        name: Listar por ID
+        meta:
+          id: req_982b345f43164c8e89aef4f13019b588
+          created: 1773706469265
+          modified: 1773706552379
+          isPrivate: false
+          description: ""
+          sortKey: -1773706458169
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Curso
+        name: Adicionar
+        meta:
+          id: req_de873a83b9244cb0ae9fb54aca4f29ce
+          created: 1773706565500
+          modified: 1773712985722
+          isPrivate: false
+          description: ""
+          sortKey: -1773706458069
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: Curso de JavaScript 2
+              description: ""
+              disabled: false
+            - name: Descricao
+              value: Curso de nivel baixo
+              description: ""
+              disabled: false
+            - name: CargaHoraria
+              value: "120"
+              description: ""
+              disabled: false
+            - name: InstrutorId
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Curso/CursoNome/a
+        name: Listar por nome
+        meta:
+          id: req_1c8159c9cde040fe8cccc4920c9bc010
+          created: 1773713001150
+          modified: 1773713027668
+          isPrivate: false
+          description: ""
+          sortKey: -1773706458119
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Curso/CursoId/1
+        name: Atualizar
+        meta:
+          id: req_2e804a4101f648d199bb591a2516e910
+          created: 1773713252199
+          modified: 1773713315038
+          isPrivate: false
+          description: ""
+          sortKey: -1773706457969
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: ""
+              description: ""
+              disabled: false
+            - name: Descricao
+              value: ""
+              description: ""
+              disabled: false
+            - name: CargaHoraria
+              value: ""
+              description: ""
+              disabled: false
+            - name: InstrutorId
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Curso/1
+        name: Remover
+        meta:
+          id: req_40bd7e6c0ef947f28fca4c3031b90161
+          created: 1773713318607
+          modified: 1773713341982
+          isPrivate: false
+          description: ""
+          sortKey: -1773706457869
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Curso Aluno
+    meta:
+      id: fld_022b027ff391463fa72c78291c82f3e3
+      created: 1773713389612
+      modified: 1773713403160
+      sortKey: -1773713389737
+      description: ""
+    children:
+      - url: https://localhost:7263/api/CursoAluno
+        name: Listar
+        meta:
+          id: req_035f3152c9f44e1a9ef5f8b8a92bb94a
+          created: 1773713407050
+          modified: 1773713427169
+          isPrivate: false
+          description: ""
+          sortKey: -1773713423492
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/CursoAluno
+        name: Adiconar
+        meta:
+          id: req_06947e6a4c144ed0bef89c7226088a5b
+          created: 1773713439076
+          modified: 1773713455317
+          isPrivate: false
+          description: ""
+          sortKey: -1773709940880.5
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: CursoId
+              value: ""
+              description: ""
+              disabled: false
+            - name: AlunoId
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/CursoAluno/cursoId/1/alunoId/1
+        name: Listar por ID
+        meta:
+          id: req_775eb4b5545f4a3d94957e99d2563f84
+          created: 1773713478452
+          modified: 1773713583326
+          isPrivate: false
+          description: ""
+          sortKey: -1773711682186.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/CursoAluno/cursoId/1/alunoId/1
+        name: Atualizar
+        meta:
+          id: req_31b3429c3c4e4daf9450c17a8bf244ea
+          created: 1773713526927
+          modified: 1773713561949
+          isPrivate: false
+          description: ""
+          sortKey: -1773709940780.5
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: StatusMatricula
+              value: "false"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/CursoAluno/cursoId/1/alunoId/1
+        name: Remover
+        meta:
+          id: req_afdea6ddfdc74abc9e48ee128513fe78
+          created: 1773713575840
+          modified: 1773713590538
+          isPrivate: false
+          description: ""
+          sortKey: -1773709940680.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Instrutor
+    meta:
+      id: fld_88da0d857c784a75aa06260da30fbfad
+      created: 1773713601011
+      modified: 1773713608608
+      sortKey: -1773713601211
+      description: ""
+    children:
+      - url: https://localhost:7263/api/Instrutor
+        name: Listar
+        meta:
+          id: req_69ff28d9f58f449885c9ff4a17475884
+          created: 1773713614473
+          modified: 1773713636090
+          isPrivate: false
+          description: ""
+          sortKey: -1773713629691
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor
+        name: Adicionar
+        meta:
+          id: req_4b13a8a025b24012903249dffb119a12
+          created: 1773713649198
+          modified: 1773713782844
+          isPrivate: false
+          description: ""
+          sortKey: -1773713526591.5
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: asdf
+              description: ""
+              disabled: false
+            - name: Email
+              value: asdf
+              description: ""
+              disabled: false
+            - name: Senha
+              value: "123456"
+              description: ""
+              disabled: false
+            - name: AreaEspecializacaoId
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor/1
+        name: Listar por ID
+        meta:
+          id: req_dd4f719170624ce1a36caea1ee96cb14
+          created: 1773713810511
+          modified: 1773713829286
+          isPrivate: false
+          description: ""
+          sortKey: -1773713578141.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor/1
+        name: Atualizar
+        meta:
+          id: req_699e18b6c1bb4c42bdc9b72da8418204
+          created: 1773713847512
+          modified: 1773713865596
+          isPrivate: false
+          description: ""
+          sortKey: -1773713475041.75
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: Nome
+              value: asdf
+              description: ""
+              disabled: false
+            - name: Email
+              value: asdf
+              description: ""
+              disabled: false
+            - name: Senha
+              value: "123456"
+              description: ""
+              disabled: false
+            - name: AreaEspecializacaoId
+              value: "1"
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor/1
+        name: Remover
+        meta:
+          id: req_6e7eeef556674d9199794a103f6cbba7
+          created: 1773713878771
+          modified: 1773713887122
+          isPrivate: false
+          description: ""
+          sortKey: -1773713449266.875
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor/instrutorEmail/@
+        name: Listar por email
+        meta:
+          id: req_fd06dc2d72de4f58a96c26021eb5383f
+          created: 1773713901344
+          modified: 1773713934531
+          isPrivate: false
+          description: ""
+          sortKey: -1773713552366.375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7263/api/Instrutor/instrutorNome/a
+        name: Listar por nome
+        meta:
+          id: req_9b804f5166c0400e8a7a1e38d904bba4
+          created: 1773713917563
+          modified: 1773713940288
+          isPrivate: false
+          description: ""
+          sortKey: -1773713565253.8125
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a1e2115e6640140d17264ebb0c31f1be707f70e6
+    created: 1773703511583
+    modified: 1773703511583
+environments:
+  name: Base Environment
+  meta:
+    id: env_a1e2115e6640140d17264ebb0c31f1be707f70e6
+    created: 1773703511581
+    modified: 1773703511581
+    isPrivate: false

@@ -2,6 +2,7 @@
 using LearnHomeAPI.Domains;
 using LearnHomeAPI.Interfaces;
 using Microsoft.Identity.Client;
+using System.Collections.Immutable;
 
 namespace LearnHomeAPI.Repositories
 {
@@ -28,28 +29,36 @@ namespace LearnHomeAPI.Repositories
             return ctx.Curso.Where(a => a.Nome.Contains(nome)).ToList();
 
         }
-
+        
+        public bool CursoExiste(string nome)
+        {
+            return ctx.Curso.Any(c => c.Nome == nome);
+        }
 
         public void Adicionar(Curso curso)
         {
+            Curso cursoAdicionado = new Curso
+            {
+                Nome = curso.Nome,
+                Descricao = curso.Descricao,
+                CargaHoraria = curso.CargaHoraria,
+                InstrutorId = curso.InstrutorId
+            };
+
             ctx.Curso.Add(curso);
             ctx.SaveChanges();
         }
 
-        public void Atualizar(int Cursoid, int InstrutorId, Curso curso)
+        public void Atualizar(int cursoid, Curso curso)
         {
-            var cursoExistente = ctx.Curso.FirstOrDefault(c => c.Id == Cursoid);
+            var cursoExistente = ctx.Curso.FirstOrDefault(c => c.Id == cursoid);
             if (cursoExistente == null)
                 return;
 
             cursoExistente.Nome = curso.Nome;
             cursoExistente.Descricao = curso.Descricao;
 
-            Instrutor InstrutorCurso = ctx.Instrutor.FirstOrDefault(i => i.Id == InstrutorId);
-            if (InstrutorCurso == null)
-                return;
-
-            cursoExistente.Instrutor = (ICollection<Instrutor>)InstrutorCurso;
+            cursoExistente.InstrutorId = curso.InstrutorId;
             ctx.SaveChanges();
         }
 

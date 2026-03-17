@@ -6,13 +6,14 @@ using Microsoft.Identity.Client;
 
 namespace LearnHomeAPI.Applications.Service
 {
-    public class CursoService
+    public class Cursoervice
     {
         private readonly ICursoRepository _repository;
         private readonly IInstrutorRepository _InstrutorRepository;
-        public CursoService(ICursoRepository cursoRepository)
+        public Cursoervice(ICursoRepository cursoRepository, IInstrutorRepository instrutor)
         {
             _repository = cursoRepository;
+            _InstrutorRepository = instrutor;
         }
 
         public LerCursoDto ConverterCursoParaDto(Curso curso)
@@ -29,14 +30,14 @@ namespace LearnHomeAPI.Applications.Service
 
         public List<LerCursoDto> Listar()
         {
-            List<Curso> cursos = _repository.Listar();
-            if (cursos == null || cursos.Count == 0)
+            List<Curso> Curso = _repository.Listar();
+            if (Curso == null || Curso.Count == 0)
                 throw new Exception("Nenhum curso encontrado!");
 
-            List<LerCursoDto> cursosDto = cursos.Select(cursosSelecionado => ConverterCursoParaDto(cursosSelecionado))
+            List<LerCursoDto> CursoDto = Curso.Select(CursoSelecionado => ConverterCursoParaDto(CursoSelecionado))
                 .ToList();
 
-            return cursosDto;
+            return CursoDto;
         }
 
         public LerCursoDto ObterPorId(int id)
@@ -56,33 +57,38 @@ namespace LearnHomeAPI.Applications.Service
             if (curso == null)
                 throw new Exception("Nenhum curso encontrado!");
 
-            List<LerCursoDto> cursosDto = curso.Select(cursoSelecionado => ConverterCursoParaDto(cursoSelecionado))
+            List<LerCursoDto> CursoDto = curso.Select(Cursoelecionado => ConverterCursoParaDto(Cursoelecionado))
                 .ToList();
 
-            return cursosDto;
+            return CursoDto;
         }
 
-        public Curso ConverterDtoAdicionarParaCurso(AdicionarCursoDto cursoDto)
+        public bool CursoExiste(string nome)
         {
-            Instrutor instrutor = _InstrutorRepository.ObterPorId(cursoDto.InstrutorId);
+            if (_repository.CursoExiste(nome) == true)
+                return true;
+
+            return false;
+        }
+
+
+        public LerCursoDto Adicionar(AdicionarCursoDto cursoDto)
+        {
+            if (_repository.CursoExiste(cursoDto.Nome) == true)
+                throw new DomainException("Já existe um curso com esse nome!");
+
+            var instrutor = _InstrutorRepository.ObterPorId(cursoDto.InstrutorId);
+
             Curso curso = new Curso
             {
                 Nome = cursoDto.Nome,
                 Descricao = cursoDto.Descricao,
                 CargaHoraria = cursoDto.CargaHoraria,
-                Instrutor = (ICollection<Instrutor>)instrutor
+                InstrutorId = cursoDto.InstrutorId
             };
-            return curso;
-        }
-
-        public void Adicionar(AdicionarCursoDto cursoDto)
-        {
-            if (_repository.ObterPorNome(cursoDto.Nome) != null)
-                throw new DomainException("Já existe um curso com esse nome!");
-
-            Curso curso = ConverterDtoAdicionarParaCurso(cursoDto);
 
             _repository.Adicionar(curso);
+            return ConverterCursoParaDto(curso);
         }
 
         public Curso ConverterDtoAtualizarParaCurso(AtualizarCursoDto cursoDto)
@@ -93,22 +99,21 @@ namespace LearnHomeAPI.Applications.Service
 
             var curso = new Curso
             {
-                Id = cursoDto.Id,
                 Nome = cursoDto.Nome,
                 CargaHoraria = cursoDto.CargaHoraria,
                 Descricao = cursoDto.Descricao,
-                Instrutor = (ICollection<Instrutor>)Instrutor
+                InstrutorId = cursoDto.InstrutorId
             };
 
             return curso;
         }
 
-        public void Atualizar(int cursoId, int InstrutorId, AtualizarCursoDto curso)
+        public void Atualizar(int cursoId, AtualizarCursoDto curso)
         {
-            if (_repository.ObterPorId(curso.Id) == null)
+            if (_repository.ObterPorId(cursoId) == null)
                 throw new DomainException("Nenhum curso encontrado para ser atualizado!");
 
-            _repository.Atualizar(cursoId, InstrutorId, ConverterDtoAtualizarParaCurso(curso));
+            _repository.Atualizar(cursoId, ConverterDtoAtualizarParaCurso(curso));
         }
 
         public void Remover(int id)

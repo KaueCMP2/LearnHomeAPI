@@ -13,7 +13,11 @@ public partial class Curso
 
     public int CargaHoraria { get; set; }
 
+    public int InstrutorId { get; set; }
+
     public virtual ICollection<CursoAluno> CursoAluno { get; set; } = new List<CursoAluno>();
 
-    public virtual ICollection<Instrutor> Instrutor { get; set; } = new List<Instrutor>();
+    public virtual Instrutor Instrutor { get; set; } = null!;
+
+    public virtual ICollection<Instrutor> Intrutor { get; set; } = new List<Instrutor>();
 }

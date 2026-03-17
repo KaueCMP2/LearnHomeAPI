@@ -9,8 +9,8 @@ namespace LearnHomeAPI.Controllers
     [ApiController]
     public class CursoController : ControllerBase
     {
-        private readonly CursoService _service;
-        public CursoController(CursoService service)
+        private readonly Cursoervice _service;
+        public CursoController(Cursoervice service)
         {
             _service = service;
         }
@@ -29,7 +29,7 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("curosId/{id}")]
+        [HttpGet("CursoId/{id}")]
         public IActionResult ObterPorId(int id)
         {
             try
@@ -43,7 +43,7 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpGet("cursoNome/{nome}")]
+        [HttpGet("CursoNome/{nome}")]
         public IActionResult ObterPorId(string nome)
         {
             try
@@ -72,13 +72,13 @@ namespace LearnHomeAPI.Controllers
             }
         }
 
-        [HttpPut("cursoId/{cursoId}/InstrutorId/{InstrutorId}")]
+        [HttpPut("CursoId/{cursoId}")]
         [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public IActionResult Atualizar([FromForm] int cursoId, int InstrutorId, AtualizarCursoDto cursoDto)
+        public IActionResult Atualizar(int cursoId, [FromForm] AtualizarCursoDto cursoDto)
         {
             try
             {
-                _service.Atualizar(cursoId, InstrutorId, cursoDto);
+                _service.Atualizar(cursoId, cursoDto);
                 return NoContent();
             }
             catch (Exception ex)

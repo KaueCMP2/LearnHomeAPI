@@ -25,7 +25,6 @@ namespace LearnHomeAPI.Repositories
         public List<Instrutor> ObterPorNome(string nome)
         {
             return ctx.Instrutor.Where(a => a.Nome.Contains(nome)).ToList();
-
         }
 
         public List<Instrutor> ObterPorEmail(string email)

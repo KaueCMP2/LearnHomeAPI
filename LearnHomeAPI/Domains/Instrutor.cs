@@ -18,4 +18,6 @@ public partial class Instrutor
     public virtual AreaEspecializacao? AreaEspecializacao { get; set; }
 
     public virtual ICollection<Curso> Curso { get; set; } = new List<Curso>();
+
+    public virtual ICollection<Curso> CursoNavigation { get; set; } = new List<Curso>();
 }

@@ -8,10 +8,10 @@ using System.Text;
 
 namespace LearnHomeAPI.Applications.Service
 {
-    public class AlunoService
+    public class Alunoervice
     {
         private readonly IAlunoRepository _repository;
-        public AlunoService(IAlunoRepository repository)
+        public Alunoervice(IAlunoRepository repository)
         {
             _repository = repository;
         }
@@ -51,14 +51,14 @@ namespace LearnHomeAPI.Applications.Service
 
         public List<LerAlunoDto> Listar()
         {
-            List<Aluno> alunos = _repository.Listar();
+            List<Aluno> Aluno = _repository.Listar();
             if (_repository.Listar == null)
                 throw new DomainException("Nenhum aluno encontrada!");
 
-            List<LerAlunoDto> alunosDto = alunos.Select(alunoSelecionado => ConverterAlunoParaDto(alunoSelecionado))
+            List<LerAlunoDto> AlunoDto = Aluno.Select(Alunoelecionado => ConverterAlunoParaDto(Alunoelecionado))
                 .ToList();
 
-            return alunosDto;
+            return AlunoDto;
         }
 
         public LerAlunoDto ObterPorId(int id)
@@ -78,10 +78,10 @@ namespace LearnHomeAPI.Applications.Service
             if (aluno == null)
                 throw new DomainException("Nenhum aluno encontrado!");
 
-            List<LerAlunoDto> alunosDto = aluno.Select(alunoSelecionado => ConverterAlunoParaDto(alunoSelecionado))
+            List<LerAlunoDto> AlunoDto = aluno.Select(Alunoelecionado => ConverterAlunoParaDto(Alunoelecionado))
                 .ToList();
 
-            return alunosDto;
+            return AlunoDto;
         }
 
         public List<LerAlunoDto> ObterPorEmail(string email)
@@ -90,16 +90,17 @@ namespace LearnHomeAPI.Applications.Service
             if (aluno == null)
                 throw new DomainException("Nenhum aluno encontrado!");
 
-            List<LerAlunoDto> alunosDto = aluno.Select(alunoSelecionado => ConverterAlunoParaDto(alunoSelecionado))
+            List<LerAlunoDto> AlunoDto = aluno.Select(Alunoelecionado => ConverterAlunoParaDto(Alunoelecionado))
                 .ToList();
 
-            return alunosDto;
+            return AlunoDto;
         }
 
         public LerAlunoDto Adicionar(AdicionarAlunoDto alunoDto)
         {
             if (_repository.AlunoExiste(alunoDto.Email) == true)
                 throw new DomainException("email já cadastrado");
+
 
             Aluno aluno = new Aluno
             {
@@ -120,7 +121,7 @@ namespace LearnHomeAPI.Applications.Service
 
             alunoBanco.Nome = aluno.Nome;
 
-            if (_repository.ObterPorEmail(aluno.Email) != null)
+            if (_repository.AlunoExiste(aluno.Email) == true)
                 throw new DomainException("Email em uso!");
 
             alunoBanco.Email = aluno.Email;

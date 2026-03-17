@@ -10,8 +10,8 @@ namespace LearnHomeAPI.Controllers
     [ApiController]
     public class CursoAlunoController : ControllerBase
     {
-        private readonly CursoAlunoService _service;
-        public CursoAlunoController(CursoAlunoService service)
+        private readonly CursoAlunoervice _service;
+        public CursoAlunoController(CursoAlunoervice service)
         {
             _service = service;
         }
@@ -21,8 +21,8 @@ namespace LearnHomeAPI.Controllers
         {
             try
             {
-                List<LerCursoAlunoDto> cursosAlunos = _service.Listar();
-                return Ok(cursosAlunos);
+                List<LerCursoAlunoDto> CursoAluno = _service.Listar();
+                return Ok(CursoAluno);
             }
             catch (Exception ex)
             {
@@ -31,7 +31,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpGet("cursoId/{cursoId}/alunoId/{alunoId}")]
-        public IActionResult ObterPorId([FromForm] int cursoId, int alunoId)
+        public IActionResult ObterPorId(int cursoId, int alunoId)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace LearnHomeAPI.Controllers
 
         [HttpPut("cursoId/{cursoId}/alunoId/{alunoId}")]
         [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public IActionResult Atualizar([FromForm] int cursoId, int alunoId, AtualizarCursoAlunoDto cursoAlunoDto)
+        public IActionResult Atualizar(int cursoId, int alunoId, [FromForm] AtualizarCursoAlunoDto cursoAlunoDto)
         {
             try
             {
@@ -74,8 +74,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpDelete("cursoId/{cursoId}/alunoId/{alunoId}")]
-        [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public IActionResult Remover([FromForm] int cursoId, int alunoId)
+        public IActionResult Remover(int cursoId, int alunoId)
         {
             try
             {

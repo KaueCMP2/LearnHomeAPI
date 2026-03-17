@@ -5,10 +5,10 @@ using LearnHomeAPI.Interfaces;
 
 namespace LearnHomeAPI.Applications.Service
 {
-    public class AreaEspecializacaoService
+    public class AreaEspecializacaoervice
     {
         private readonly IAreaEspecializacaoRepository _repository;
-        public AreaEspecializacaoService(IAreaEspecializacaoRepository repository)
+        public AreaEspecializacaoervice(IAreaEspecializacaoRepository repository)
         {
             _repository = repository;
         }
@@ -24,14 +24,15 @@ namespace LearnHomeAPI.Applications.Service
 
             return area;
         }
+
         public List<LerAreaEspecializacaoDto> Listar()
         {
             List<AreaEspecializacao> areas = _repository.Listar();
 
-            if (areas.Any() == false)
+            if (areas == null)
                 throw new DomainException("Nenhuma area encontrada!");
 
-            List<LerAreaEspecializacaoDto> areasDto = areas.Select(areasSelecionadas => ConverterAreaEspecializacaoParaDto(areasSelecionadas))
+            List<LerAreaEspecializacaoDto> areasDto = areas.Select(areaSelecionadas => ConverterAreaEspecializacaoParaDto(areaSelecionadas))
                 .ToList();
 
             return areasDto;

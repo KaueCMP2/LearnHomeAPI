@@ -5,12 +5,12 @@ using LearnHomeAPI.Interfaces;
 
 namespace LearnHomeAPI.Applications.Service
 {
-    public class CursoAlunoService
+    public class CursoAlunoervice
     {
         private readonly ICursoAlunoRepository _repository;
         private readonly ICursoRepository _cursoRepository;
         private readonly IAlunoRepository _alunoRepository;
-        public CursoAlunoService(ICursoAlunoRepository repository, ICursoRepository cursoRepository, IAlunoRepository alunoRepository)
+        public CursoAlunoervice(ICursoAlunoRepository repository, ICursoRepository cursoRepository, IAlunoRepository alunoRepository)
         {
             _repository = repository;
             _cursoRepository = cursoRepository;
@@ -35,7 +35,7 @@ namespace LearnHomeAPI.Applications.Service
             if (cursoAluno == null)
                 throw new DomainException("Nenhum Curso ou aluno encontrado!");
 
-            List<LerCursoAlunoDto> cursoAlunoDto = cursoAluno.Select(cursoAlunoSelecionado => ConverterCursoAlunoParaDto(cursoAlunoSelecionado))
+            List<LerCursoAlunoDto> cursoAlunoDto = cursoAluno.Select(CursoAlunoelecionado => ConverterCursoAlunoParaDto(CursoAlunoelecionado))
                 .ToList();
 
             return cursoAlunoDto;
@@ -56,6 +56,15 @@ namespace LearnHomeAPI.Applications.Service
             if (cursoAlunoDto.CursoId <= 0 && cursoAlunoDto.AlunoId <= 0)
                 throw new DomainException("Dados invalidos!");
 
+            if (_repository.CursoAlunoExiste(cursoAlunoDto.CursoId, cursoAlunoDto.AlunoId) == true)
+                throw new DomainException("Dados invalidos! aluno já matriculado!");
+
+            if (_alunoRepository.ObterPorId(cursoAlunoDto.AlunoId) == null)
+                throw new DomainException("Dados invalidos! aluno não existe!");
+
+            if (_cursoRepository.ObterPorId(cursoAlunoDto.CursoId) == null)
+                throw new DomainException("Dados invalidos! Curso não existe!");
+           
             CursoAluno cursoAluno = new CursoAluno
             {
                 AlunoId = cursoAlunoDto.AlunoId,
@@ -80,13 +89,8 @@ namespace LearnHomeAPI.Applications.Service
                 throw new DomainException("Relação entre aluno e curso não encontrada!");
 
             CursoAluno cursoAluno = _repository.ObterPorId(cursoId, alunoId);
-            cursoAluno.AlunoId = cursoAlunoDto.AlunoId;
-            cursoAluno.CursoId = cursoAlunoDto.CursoId;
-
-            if (_repository.NumeroMatriculaExiste(cursoAlunoDto.NumeroMatricula) == true)
-                throw new DomainException("Numero de matricula já cadastrado!");
-
-            cursoAluno.NumeroMatricula = cursoAlunoDto.NumeroMatricula;
+            cursoAluno.AlunoId = alunoId;
+            cursoAluno.CursoId = cursoId;
             cursoAluno.StatusMatricula = cursoAlunoDto.StatusMatricula;
 
             _repository.Atualizar(cursoAluno.CursoId, cursoAluno.AlunoId, cursoAluno);

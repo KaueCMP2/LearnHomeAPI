@@ -10,8 +10,8 @@ namespace LearnHomeAPI.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        private readonly AlunoService _service;
-        public AlunoController(AlunoService service)
+        private readonly Alunoervice _service;
+        public AlunoController(Alunoervice service)
         {
             _service = service;
         }
@@ -21,8 +21,8 @@ namespace LearnHomeAPI.Controllers
         {
             try
             {
-                List<LerAlunoDto> alunosDto = _service.Listar();
-                return Ok(alunosDto);
+                List<LerAlunoDto> AlunoDto = _service.Listar();
+                return Ok(AlunoDto);
             }
             catch (Exception ex)
             {
@@ -59,6 +59,7 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpGet("emailAluno/{email}")]
+        [Consumes("multipart/form-data")]
         public ActionResult ObterPorEmail(string email)
         {
             try
@@ -89,7 +90,7 @@ namespace LearnHomeAPI.Controllers
 
         [HttpPut("{id}")]
         [Consumes("multipart/form-data")] // Indica que recebe dados no formato multpart/from-data
-        public ActionResult Atualizar([FromForm] int id, AtualizarAlunoDto alunoDto)
+        public ActionResult Atualizar(int id, [FromForm] AtualizarAlunoDto alunoDto)
         {
             try
             {

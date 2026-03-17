@@ -22,7 +22,7 @@ namespace LearnHomeAPI.Repositories
             return ctx.CursoAluno.FirstOrDefault(ca => ca.CursoId == cursoId && ca.AlunoId == alunoId);
         }
 
-        public bool CursoAlunoExiste (int cursoId, int alunoId)
+        public bool CursoAlunoExiste(int cursoId, int alunoId)
         {
             return ctx.CursoAluno.Any(c => c.CursoId == cursoId && c.AlunoId == alunoId);
         }
@@ -37,8 +37,9 @@ namespace LearnHomeAPI.Repositories
             CursoAluno cursoAlunoCriado = new CursoAluno
             {
                 CursoId = cursoAluno.CursoId,
-                AlunoId = cursoAluno.AlunoId
-			};
+                AlunoId = cursoAluno.AlunoId,
+                StatusMatricula = cursoAluno.StatusMatricula
+            };
             ctx.CursoAluno.Add(cursoAlunoCriado);
             ctx.SaveChanges();
         }
@@ -50,6 +51,8 @@ namespace LearnHomeAPI.Repositories
             {
                 cursoAlunoExistente.CursoId = cursoId;
                 cursoAlunoExistente.AlunoId = alunoId;
+                cursoAlunoExistente.StatusMatricula = cursoAluno.StatusMatricula;
+
                 ctx.SaveChanges();
             }
         }

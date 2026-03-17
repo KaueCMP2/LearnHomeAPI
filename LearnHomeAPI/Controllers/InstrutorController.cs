@@ -11,8 +11,8 @@ namespace LearnHomeAPI.Controllers
     [ApiController]
     public class InstrutorController : ControllerBase
     {
-        private readonly InstrutorService _service;
-        public InstrutorController(InstrutorService service)
+        private readonly Instrutorervice _service;
+        public InstrutorController(Instrutorervice service)
         {
             _service = service;
         }
@@ -51,7 +51,7 @@ namespace LearnHomeAPI.Controllers
             try
             {
                 List<LerInstrutorDto> Instrutor = _service.ObterPorNome(nome);
-                return Ok();
+                return Ok(Instrutor);
             }
             catch (Exception ex)
             {
@@ -65,7 +65,7 @@ namespace LearnHomeAPI.Controllers
             try
             {
                 List<LerInstrutorDto> Instrutor = _service.ObterPorEmail(email);
-                return Ok();
+                return Ok(Instrutor);
             }
             catch (Exception ex)
             {
@@ -74,7 +74,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult<AdicionarInstrutorDto> Adicionar(AdicionarInstrutorDto Instrutor)
+        [Consumes("multipart/form-data")]
+        public ActionResult<AdicionarInstrutorDto> Adicionar([FromForm]AdicionarInstrutorDto Instrutor)
         {
             try
             {
@@ -88,7 +89,8 @@ namespace LearnHomeAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<AtualizarInstrutorDto> Atualizar(int id, AtualizarInstrutorDto Instrutor)
+        [Consumes("multipart/form-data")]
+        public ActionResult<AtualizarInstrutorDto> Atualizar(int id, [FromForm] AtualizarInstrutorDto Instrutor)
         {
             try
             {
