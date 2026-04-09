@@ -1,4 +1,5 @@
 using Assets_menagement_system.Application.Autenticacao;
+using DotNetEnv;
 using LearnHomeAPI.Application.Services;
 using LearnHomeAPI.Applications.Service;
 using LearnHomeAPI.Contexts;
@@ -11,6 +12,15 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// carregando o .env
+Env.Load();
+
+// pegando a connection string
+string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
+// Conexão com banco
+builder.Services.AddDbContext<LearnHomeDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
@@ -43,9 +53,6 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-
-// Conex�o com o banco de dados
-builder.Services.AddDbContext<LearnHomeDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //Aluno
 builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
